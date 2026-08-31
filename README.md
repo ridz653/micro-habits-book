@@ -1,2 +1,1028 @@
 # micro-habits-book
 Micro-Habits by Ridhima Pandey explores the power of small, consistent actions and how tiny changes can gradually create meaningful improvements in everyday life. Discover simple ways to build better habits, stay consistent, overcome procrastination, and move closer to your goals—one small step at a time.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Micro-Habits by Ridhima Pandey | Small Changes. Big Results.</title>
+
+  <meta name="description" content="Discover Micro-Habits by Ridhima Pandey—a practical guide to building better routines, overcoming procrastination, and creating meaningful change through small, consistent actions.">
+
+  <meta property="og:title" content="Micro-Habits by Ridhima Pandey">
+  <meta property="og:description" content="Small Changes. Big Results. Discover the power of tiny, consistent actions.">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #26352c;
+      background: #faf9f4;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250,249,244,0.96);
+      border-bottom: 1px solid #e5e1d5;
+      backdrop-filter: blur(10px);
+    }
+
+    nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      color: #315c42;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #39473e;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #315c42;
+    }
+
+    .menu {
+      display: none;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* GENERAL */
+    section {
+      padding: 85px 22px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 18px;
+      color: #294b36;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+      color: #667067;
+      font-size: 17px;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f6f3e9, #edf4ed);
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 82px);
+      line-height: 1;
+      letter-spacing: 3px;
+      color: #294b36;
+      margin-bottom: 14px;
+    }
+
+    .tagline {
+      font-size: 25px;
+      font-weight: 700;
+      color: #6b7f68;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      color: #5c665e;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      font-weight: 700;
+      color: #294b36;
+      margin: 18px 0 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: .25s;
+      border: 2px solid #315c42;
+    }
+
+    .btn-primary {
+      background: #315c42;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      opacity: .9;
+    }
+
+    .btn-outline {
+      color: #315c42;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: #315c42;
+      color: white;
+    }
+
+    /* BOOK COVER */
+    .book-cover {
+      width: min(330px, 80%);
+      aspect-ratio: 2 / 3;
+      margin: auto;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #315c42, #8ba58c);
+      box-shadow: 15px 20px 40px rgba(0,0,0,.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      transform: rotate(2deg);
+    }
+
+    .cover-content h2 {
+      font-size: 36px;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
+
+    .cover-content p {
+      color: white;
+      font-size: 15px;
+      margin-top: 18px;
+    }
+
+    .cover-content span {
+      display: block;
+      margin-top: 70px;
+      font-weight: bold;
+    }
+
+    /* ABOUT */
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+      color: #5d675f;
+    }
+
+    .quote-box {
+      margin: 40px auto 0;
+      max-width: 700px;
+      padding: 35px;
+      border-radius: 20px;
+      background: #eaf1e9;
+      text-align: center;
+      font-size: 27px;
+      font-weight: 800;
+      color: #315c42;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e6e2d8;
+      border-radius: 18px;
+      padding: 30px;
+      transition: .25s;
+      box-shadow: 0 7px 20px rgba(0,0,0,.04);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.08);
+    }
+
+    .card-icon {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      color: #315c42;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #6a716b;
+    }
+
+    /* WHY READ */
+    .why {
+      background: #edf4ed;
+    }
+
+    .mindset {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .mindset-box {
+      padding: 38px;
+      border-radius: 20px;
+      background: white;
+      text-align: center;
+    }
+
+    .mindset-box h3 {
+      margin-bottom: 15px;
+      color: #315c42;
+    }
+
+    .mindset-box p {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* AUTHOR */
+    .author-section {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .author-photo {
+      width: 240px;
+      height: 240px;
+      margin: auto;
+      border-radius: 50%;
+      background: #dfe9df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 75px;
+    }
+
+    .author-text h2 {
+      color: #294b36;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .author-text p {
+      color: #606a63;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    .message {
+      padding: 25px;
+      background: #f3f0e7;
+      border-left: 5px solid #315c42;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      background: #faf9f4;
+    }
+
+    .review-placeholder {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      padding: 45px;
+      border: 2px dashed #ccd4cb;
+      border-radius: 20px;
+    }
+
+    .review-placeholder h3 {
+      color: #315c42;
+      margin-bottom: 12px;
+    }
+
+    /* BUY */
+    .buy {
+      background: #315c42;
+      color: white;
+      text-align: center;
+    }
+
+    .buy .section-title {
+      color: white;
+    }
+
+    .buy .section-intro {
+      color: #e6eee7;
+    }
+
+    .purchase-card {
+      max-width: 650px;
+      margin: auto;
+      background: white;
+      color: #26352c;
+      padding: 40px;
+      border-radius: 22px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.15);
+    }
+
+    .purchase-card h3 {
+      color: #315c42;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .purchase-card p {
+      color: #687168;
+      margin-bottom: 25px;
+    }
+
+    /* CONTACT */
+    .contact-form {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #d8d8d0;
+      border-radius: 10px;
+      font-size: 16px;
+      background: white;
+    }
+
+    .contact-form textarea {
+      height: 140px;
+      resize: vertical;
+    }
+
+    /* SHARE */
+    .share {
+      text-align: center;
+      background: #edf4ed;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f3025;
+      color: #dce5dd;
+      text-align: center;
+      padding: 45px 20px;
+    }
+
+    footer h3 {
+      color: white;
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      margin: 7px;
+      color: #bfcac1;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+    }
+
+    .footer-links a {
+      color: white;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #faf9f4;
+        padding: 20px;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu {
+        display: block;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .mindset {
+        grid-template-columns: 1fr;
+      }
+
+      .author-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 31px;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="logo">MICRO-HABITS</a>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#discover">Discover</a>
+      <a href="#author">Author</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#buy">Buy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div>
+      <h1>MICRO-HABITS</h1>
+
+      <div class="tagline">
+        Small Changes. Big Results.
+      </div>
+
+      <p>
+        You don't need to transform your entire life overnight.
+        Sometimes, the smallest changes can create the biggest difference.
+      </p>
+
+      <div class="author">
+        By Ridhima Pandey
+      </div>
+
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="https://store.pothi.com/book/ridhima-pandey-micro-habits-severe-digital-burnout/"
+           target="_blank"
+           rel="noopener noreferrer">
+          🛒 Buy the Book
+        </a>
+
+        <a class="btn btn-outline" href="#about">
+          Explore the Book
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <!-- BOOK COVER -->
+      <div class="book-cover">
+        <div class="cover-content">
+          <h2>MICRO-<br>HABITS</h2>
+          <p>Small Changes. Big Results.</p>
+          <span>Ridhima Pandey</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT BOOK -->
+<section id="about">
+  <div class="container">
+
+    <h2 class="section-title">About the Book</h2>
+
+    <p class="section-intro">
+      Micro-Habits is a practical guide to understanding how tiny,
+      consistent actions can gradually improve everyday life.
+    </p>
+
+    <div class="about-box">
+      <p>
+        Instead of trying to change everything at once, this book explores
+        how small, manageable actions can become routines and help you move
+        toward meaningful goals.
+      </p>
+
+      <p style="margin-top:20px;">
+        Whether you want to become more productive, build healthier routines,
+        overcome procrastination, or simply become a better version of yourself,
+        Micro-Habits encourages you to start small and keep going.
+      </p>
+    </div>
+
+    <div class="quote-box">
+      Start Small.<br>
+      Stay Consistent.<br>
+      Grow Gradually.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DISCOVER -->
+<section id="discover" class="why">
+  <div class="container">
+
+    <h2 class="section-title">What You'll Discover</h2>
+
+    <p class="section-intro">
+      Simple ideas that can help you approach habits, routines and
+      personal growth differently.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>Build Better Habits</h3>
+        <p>
+          Learn how small actions can become meaningful routines.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Beat Procrastination</h3>
+        <p>
+          Make difficult tasks easier to start by taking smaller steps.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <h3>Stay Consistent</h3>
+        <p>
+          Understand why consistency can matter more than occasional
+          bursts of motivation.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⏰</div>
+        <h3>Create Productive Routines</h3>
+        <p>
+          Discover simple ways to introduce positive habits into
+          everyday life.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Make Goals Achievable</h3>
+        <p>
+          Break overwhelming goals into smaller, manageable actions.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>Keep Moving Forward</h3>
+        <p>
+          Learn to appreciate progress instead of waiting for perfection.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY READ -->
+<section>
+  <div class="container">
+
+    <h2 class="section-title">Why Micro-Habits?</h2>
+
+    <p class="section-intro">
+      Big goals can feel overwhelming. Meaningful change doesn't always
+      require a complete transformation. Sometimes, it begins with something
+      much smaller.
+    </p>
+
+    <div class="mindset">
+
+      <div class="mindset-box">
+        <h3>OLD MINDSET</h3>
+        <p>
+          “I need to change everything.”
+        </p>
+      </div>
+
+      <div class="mindset-box">
+        <h3>NEW MINDSET</h3>
+        <p>
+          “What is one small thing I can do today?”
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:35px;">
+      <a href="#buy" class="btn btn-primary">
+        Start Your Journey
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BOOK HIGHLIGHT -->
+<section class="why">
+  <div class="container">
+
+    <h2 class="section-title">Your Next Step</h2>
+
+    <div class="purchase-card">
+
+      <h3>Micro-Habits</h3>
+
+      <p>
+        By Ridhima Pandey
+      </p>
+
+      <p>
+        Your next positive change doesn't have to be huge.
+        It can start with a single page.
+      </p>
+
+      <a class="btn btn-primary"
+         href="https://store.pothi.com/book/ridhima-pandey-micro-habits-severe-digital-burnout/"
+         target="_blank"
+         rel="noopener noreferrer">
+        Get Your Copy
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- AUTHOR -->
+<section id="author">
+  <div class="container author-section">
+
+    <div>
+      <div class="author-photo">
+        👩‍💻
+      </div>
+    </div>
+
+    <div class="author-text">
+
+      <h2>Meet the Author</h2>
+
+      <h3>Ridhima Pandey</h3>
+
+      <p>
+        Ridhima Pandey is the author of
+        <strong>Micro-Habits</strong>, a book centered around
+        personal growth, consistency, everyday routines and
+        the power of small actions.
+      </p>
+
+      <p>
+        Through Micro-Habits, she explores a simple but powerful idea:
+        meaningful change doesn't always begin with a huge decision.
+        Sometimes, it begins with one small action repeated every day.
+      </p>
+
+      <div class="message">
+        “You don't have to become a completely different person overnight.
+        Give yourself permission to start small. One small step today can
+        become a completely different journey tomorrow.”
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="container">
+
+    <h2 class="section-title">What Readers Are Saying</h2>
+
+    <div class="review-placeholder">
+
+      <h3>Have you read Micro-Habits?</h3>
+
+      <p>
+        I'd love to hear what you thought about the book,
+        what you learned, or which idea stayed with you.
+      </p>
+
+      <br>
+
+      <!-- Replace # with your review form link later -->
+      <a href="#contact" class="btn btn-outline">
+        Share Your Review
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- BUY -->
+<section id="buy" class="buy">
+
+  <div class="container">
+
+    <h2 class="section-title">Ready to Start Small?</h2>
+
+    <p class="section-intro">
+      Get your copy of Micro-Habits and begin your journey toward
+      meaningful change—one small habit at a time.
+    </p>
+
+    <div class="purchase-card">
+
+      <h3>📚 Paperback Edition</h3>
+
+      <p>
+        Get the physical copy of Micro-Habits by Ridhima Pandey.
+      </p>
+
+      <a class="btn btn-primary"
+         href="https://store.pothi.com/book/ridhima-pandey-micro-habits-severe-digital-burnout/"
+         target="_blank"
+         rel="noopener noreferrer">
+        🛒 BUY PAPERBACK
+      </a>
+
+    </div>
+
+    <br><br>
+
+    <div class="purchase-card">
+
+      <h3>📱 Kindle Edition</h3>
+
+      <p>
+        Read Micro-Habits digitally on Kindle.
+      </p>
+
+      <!-- Add your Kindle link here when you have it -->
+      <a class="btn btn-outline"
+         href="#"
+         onclick="alert('Kindle link will be added soon.'); return false;">
+        BUY ON AMAZON KINDLE
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SHARE -->
+<section class="share">
+
+  <div class="container">
+
+    <h2 class="section-title">Share the Book</h2>
+
+    <p class="section-intro">
+      If Micro-Habits inspires you, share it with someone who might need it.
+    </p>
+
+    <div class="social-buttons">
+
+      <a class="btn btn-primary"
+         href="https://wa.me/?text=Discover%20Micro-Habits%20by%20Ridhima%20Pandey%20-%20Small%20Changes.%20Big%20Results."
+         target="_blank"
+         rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
+      <a class="btn btn-outline"
+         href="#"
+         onclick="alert('Add your Instagram profile link here.'); return false;">
+        Instagram
+      </a>
+
+      <a class="btn btn-outline"
+         href="#"
+         onclick="alert('Add your Facebook profile link here.'); return false;">
+        Facebook
+      </a>
+
+      <a class="btn btn-outline"
+         href="#"
+         onclick="alert('Add your X profile link here.'); return false;">
+        X
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <div class="container">
+
+    <h2 class="section-title">Get in Touch</h2>
+
+    <p class="section-intro">
+      Have a question about Micro-Habits?
+      Want to share your feedback? I'd love to hear from you.
+    </p>
+
+    <form class="contact-form"
+          action="mailto:YOUR_EMAIL@example.com"
+          method="post"
+          enctype="text/plain">
+
+      <input type="text"
+             name="name"
+             placeholder="Your Name"
+             required>
+
+      <input type="email"
+             name="email"
+             placeholder="Your Email"
+             required>
+
+      <textarea name="message"
+                placeholder="Your Message"
+                required></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        Send Message
+      </button>
+
+    </form>
+
+    <p style="text-align:center; margin-top:25px; color:#777;">
+      Email: YOUR_EMAIL@example.com
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <h3>MICRO-HABITS</h3>
+
+  <p>By Ridhima Pandey</p>
+
+  <p>Small Changes. Big Results.</p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#author">Author</a>
+    <a href="#buy">Buy</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p>
+    © 2026 Ridhima Pandey. All rights reserved.
+  </p>
+
+</footer>
+
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.getElementById("navLinks").classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>
